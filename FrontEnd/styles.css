@@ -1,0 +1,114 @@
+/* Сброс и шрифты */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background: url('img/background.jpg') no-repeat center center/cover;
+}
+
+/* Чёрный фон на весь экран */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.85); /* затемнение */
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  margin: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Хедер */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.39rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Центр контента */
+.main {
+  text-align: center;
+  color: white;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.programs h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.programs p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Кнопка */
+.btn {
+  background-color: #d4ff00;
+  padding: 1rem 2rem;
+  color: black;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  align-self: center;
+}
+
+.btn:hover {
+  background-color: #c1ea00;
+}
