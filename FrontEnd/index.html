@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Первый блок с черным фоном -->
   <div class="overlay">
     <header class="header">
       <div class="logo">
-        <img src="img/logo.svg" alt="Логотип" />
+        <img src="FrontEnd/logo.svg" alt="Логотип" />
       </div>
       <nav class="nav">
         <a href="#">О программе</a>
@@ -21,22 +22,86 @@
     </header>
 
     <main class="main">
-  <h1>Институт информационных технологий и цифровой трансформации<br>РГУ им. А.Н. Косыгина</h1>
+      <h1>Институт информационных технологий и цифровой трансформации<br>РГУ им. А.И. Косыгина</h1>
 
-  <div class="programs">
-    <div>
-      <h2>ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ И ДИЗАЙН</h2>
-      <p>Программа бакалавриата 09.03.02 «Информационные системы и технологии»</p>
+      <div class="programs">
+        <div>
+          <h2>ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ И ДИЗАЙН</h2>
+          <p>Программа бакалавриата 09.03.02 «Информационные системы и технологии»</p>
+        </div>
+        <div>
+          <h2>ПРОГРАММИРОВАНИЕ И ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</h2>
+          <p>Программа бакалавриата 01.03.02 «Прикладная математика и информатика»</p>
+        </div>
+      </div>
+      
+      <a href="#" class="btn">Стань абитуриентом уже сейчас!</a>
+    </main>
+  </div> <!-- Закрытие блока overlay -->
+
+  <!-- Второй блок с белым фоном (вынесен за пределы overlay) -->
+  <section class="features-section">
+    <h2 class="section-title">4 важных особенности образовательной программы</h2>
+    <div class="features-container">
+      <div class="feature fade-in">
+        <div class="feature-number">1</div>
+        <h3>Базовая и гибкая часть программы</h3>
+        <p>
+          Программа состоит из двух частей: единая базовая часть для всех студентов
+          и гибкая часть для выбора направлений, востребованных в IT.
+        </p>
+      </div>
+      <div class="feature fade-in">
+        <div class="feature-number">2</div>
+        <h3>Практика и проекты</h3>
+        <p>
+          Большое внимание уделяется практическим задачам, созданию проектов и взаимодействию с компаниями.
+        </p>
+      </div>
+      <div class="feature fade-in">
+        <div class="feature-number">3</div>
+        <h3>Возможность исправления выбора</h3>
+        <p>
+          Окончательный выбор направления делается в конце второго курса, учитывая интересы студента.
+        </p>
+      </div>
+      <div class="feature fade-in">
+        <div class="feature-number">4</div>
+        <h3>Быстрый вход в сферу IT</h3>
+        <p>
+          Изучение IT начинается с первого месяца и помогает быстро сформировать профессиональные навыки.
+        </p>
+      </div>
     </div>
-    <div>
-      <h2>ПРОГРАММИРОВАНИЕ И ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</h2>
-      <p>Программа бакалавриата 01.03.02 «Прикладная математика и информатика»</p>
+  </section>
+<!-- После секции features-section -->
+<section class="stages-section">
+  <h2 class="section-title">Этапы обучения</h2>
+  <div class="stages-container">
+    <img src="education.webp" 
+         class="stages-image"
+         onerror="alert('Ошибка загрузки изображения. Проверьте путь: /education.webp')">
+  </div>
+</section>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+<section class="stages-section">
+  <div class="stages-container">
+    <h2 class="section-title"></h2>
+    <div class="image-wrapper">
+      <img src="education.webp" 
+           class="stages-image">
     </div>
   </div>
-
-  <a href="#" class="btn">Стань абитуриентом уже сейчас!</a>
-</main>
-
-  </div>
+</section>
 </body>
 </html>

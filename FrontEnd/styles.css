@@ -9,8 +9,7 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: 'Arial', sans-serif;
-  background: url('img/background.jpg') no-repeat center center/cover;
-}
+  background: url('background.jpg') no-repeat center center/cover;}
 
 /* Чёрный фон на весь экран */
 .overlay {
@@ -111,4 +110,146 @@ body, html {
 
 .btn:hover {
   background-color: #c1ea00;
+}
+.features-section {
+  padding: 80px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature {
+  position: relative;
+  text-align: left;
+}
+
+.feature-number {
+  font-size: 100px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  z-index: 0;
+}
+
+.feature h3 {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.feature p {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Анимация при скролле */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Основные стили для overlay */
+.overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили для белой секции */
+.features-section {
+  position: relative;
+  background-color: white;
+  color: black;
+  padding: 80px 40px;
+  z-index: 2;
+}
+
+/* Остальные стили остаются без изменений */
+.simple-image-section {
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+}
+
+.full-width-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* Секция с этапами обучения */
+.stages-section {
+  padding: 60px 0;
+  background-color: #000; /* Черный фон для всей секции */
+  text-align: center;
+}
+
+.stages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.image-wrapper {
+  background-color: #000; /* Черные полосы будут видны если изображение не заполняет всю ширину */
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.stages-image {
+  display: block;
+  max-width: 80%; /* Можно регулировать ширину изображения */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.stages-description {
+  color: #aaa;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .stages-image {
+    max-width: 95%;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
