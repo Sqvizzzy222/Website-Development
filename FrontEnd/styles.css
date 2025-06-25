@@ -4,38 +4,43 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body, html {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: 'Arial', sans-serif;
-  background: url('background.jpg') no-repeat center center/cover;}
+  background-color: #ffffff;
+}
 
-/* Чёрный фон на весь экран */
+/* Основной контейнер с затемненным фоном */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-
-  background-color: rgba(0, 0, 0, 0.85); /* затемнение */
-  padding: 60px 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 25px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url('background.jpg') no-repeat center center/cover;
+    padding: 20px;
+    justify-content: flex-start;
+    border-radius: 25px;
   margin: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-
 /* Хедер */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
+  padding: 10px 0; /* небольшой отступ сверху и снизу */
 }
 
 .logo {
@@ -47,8 +52,9 @@ body, html {
 }
 
 .logo img {
-  height: 80px;
+  height: 45px; /* как у тебя указано */
 }
+
 
 .nav a {
   color: white;
@@ -121,6 +127,7 @@ body, html {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 60px;
+  color :#ffffff
 }
 
 .features-container {
@@ -186,8 +193,8 @@ body, html {
   position: relative;
   background-color: white;
   color: black;
-  padding: 80px 40px;
-  z-index: 2;
+  padding: 160px 80px;
+  z-index: 3;
 }
 
 /* Остальные стили остаются без изменений */
@@ -232,7 +239,7 @@ body, html {
 }
 
 .section-title {
-  color: #fff;
+  color: #000000;
   margin-bottom: 30px;
   font-size: 2rem;
 }
@@ -251,5 +258,206 @@ body, html {
   
   .section-title {
     font-size: 1.5rem;
+  }
+}
+
+.section-title11 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+/* Стили для блока IT-модулей */
+.it-modules {
+  width: 49.33%; /* 1/3 экрана */
+  min-width: 350px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+}
+
+.modules-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modules-title {
+  color: #000000; =
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+}
+
+.modules-subtitle {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.module-card {
+  background-color: #fffdfd;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.module-name {
+  color: #000000;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.module-desc {
+  color: #666;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .it-modules {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .it-modules {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Стили для блока карьерных возможностей */
+.career-opportunities {
+  width: 66%;
+  min-width: 380px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: 20px auto;
+}
+
+.career-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.career-title {
+  color: #000000; 
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.career-subtitle {
+  color: #666;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.career-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background-color: #eee;
+}
+
+.professions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.profession-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.profession-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.profession-name {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.profession-desc {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.profession-salary {
+  color: #666;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: right;
+  margin-top: auto;
+}
+
+.salary-note {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  .career-opportunities {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-opportunities {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .professions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .professions-grid {
+    grid-template-columns: 1fr;
   }
 }
